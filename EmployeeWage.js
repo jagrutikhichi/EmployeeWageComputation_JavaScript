@@ -68,7 +68,7 @@ let dailyCntr = 0;
 
 function mapDayWithWage(dailyWage) {
     dailyCntr++;
-    return dailyCntr + " = " + dailyWage;
+    return " " + dailyCntr + " = " + dailyWage;
 }
 
 let mapDaywithWageArr = empDailyWageArr.map(mapDayWithWage);
@@ -103,3 +103,8 @@ function totalDaysWorked(numofDays, dailyWage) {
 }
 
 console.log("Number of Days Employee Worked: " + empDailyWageArr.reduce(totalDaysWorked, 0));
+
+//Store Daily Wage in a Map
+
+console.log(mapDaywithWageArr);
+console.log("Employee wage Map totalHrs: " + Array.from(mapDaywithWageArr.values()).reduce(totalWages, 0));
